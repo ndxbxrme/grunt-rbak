@@ -1,0 +1,52 @@
+{
+  "name": "grunt-rbak",
+  "description": "Backup your files, respecting .gitignores",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ndxbxrme/grunt-rbak",
+  "author": {
+    "name": "ndxbxrme",
+    "email": "lewis_the_cat@hotmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ndxbxrme/grunt-rbak.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ndxbxrme/grunt-rbak/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ndxbxrme/grunt-rbak/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "coffeelint": "^1.10.1",
+    "grunt": "^0.4.5",
+    "grunt-coffeelint": "0.0.13",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-coffee": "^0.13.0",
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^3.2.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin",
+    "backup",
+    "file"
+  ],
+  "dependencies": {
+    "async": "^1.4.2",
+    "rbak": "^0.2.2"
+  }
+}
