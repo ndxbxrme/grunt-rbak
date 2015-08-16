@@ -1,7 +1,7 @@
 {
   "name": "grunt-rbak",
   "description": "Backup your files, respecting .gitignores",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/ndxbxrme/grunt-rbak",
   "author": {
     "name": "ndxbxrme",
