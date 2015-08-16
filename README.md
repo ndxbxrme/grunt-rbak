@@ -1,4 +1,4 @@
-# grunt-rbak
+# grunt-rbak [![Build Status](https://travis-ci.org/ndxbxrme/grunt-rbak.svg?branch=master)](https://travis-ci.org/ndxbxrme/grunt-rbak)
 
 > Backup your files, respecting .gitignores
 
@@ -36,6 +36,12 @@ grunt.initConfig({
 ```
 
 ### Options
+
+#### options.command
+Type: `String`
+Default value: `backup`
+
+The command to run, can be `backup`, `restore` or `list`.
 
 #### options.base
 Type: `String`
@@ -75,9 +81,12 @@ Backup D:/DEV folder into a folder called `D:/backup`
 ```js
 grunt.initConfig({
   rbak: {
-    options: {
-      base: 'D:/backup',
-      dir: 'D:/DEV'
+    main: {
+      options: {
+        command: 'backup'
+        base: 'D:/backup',
+        dir: 'D:/DEV'
+      }
     }
   },
 });
