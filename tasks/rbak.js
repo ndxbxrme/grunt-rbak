@@ -8,23 +8,20 @@
       var done, options;
       done = this.async();
       options = this.options({
-        base: process.env.cwd(),
-        dir: process.env.cwd(),
+        base: process.cwd(),
+        dir: process.cwd(),
         ignore: 'node_modules,bower_components,.git,.svn',
         recursive: true,
         'respect-gitignore': true
       });
       switch (options.command) {
         case 'backup':
-          rbak.backup(options);
-          break;
+          return rbak.backup(options, done);
         case 'list':
-          rbak.list(options);
-          break;
+          return rbak.list(options, done);
         case 'restore':
-          rbak.restore(options);
+          return rbak.restore(options, done);
       }
-      return done();
     });
   };
 

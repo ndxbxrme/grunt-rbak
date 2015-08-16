@@ -42,12 +42,23 @@ module.exports = (grunt) ->
         'tasks/*.js'
       ]
       options: jshintrc: '.jshintrc'
-    clean: tests: [ 'tmp' ]
+    clean: tests: [ 'test/output' ]
+    rbak:
+      main:
+        options:
+          command: 'backup'
+          base: 'test/output'
+          dir: 'test/input'
+          ignore: 'node_modules,*.xml,file2*'
+    nodeunit:
+      tests: ['test/test*.js']
   grunt.loadTasks 'tasks'
   grunt.registerTask 'test', [
     'clean'
     'coffeelint'
-    #'nodeunit'
+    'coffee'
+    'rbak'
+    'nodeunit'
   ]
   grunt.registerTask 'default', [
     'coffeelint'
